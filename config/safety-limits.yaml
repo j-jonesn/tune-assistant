@@ -1,0 +1,21 @@
+schema_version: 1
+limits:
+  knock_retard_deg:
+    warning: 2.0
+    critical: 4.0
+  injector_duty_cycle_percent:
+    warning: 80
+    critical: 90
+  transmission_temperature_deg_f:
+    warning: 210
+    critical: 230
+  fuel_pressure_differential_psi:
+    target: 58
+    warning_deviation: 5
+    critical_deviation: 8
+  lambda_error_percent:
+    warning: 5
+    critical: 10
+  boost_psi:
+    warning: 15
+    critical: 17
