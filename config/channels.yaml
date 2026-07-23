@@ -1,0 +1,56 @@
+schema_version: 1
+channels:
+  time:
+    aliases:
+      - Time
+      - Time [s]
+  engine_speed:
+    aliases:
+      - Engine RPM
+      - Engine Speed
+      - RPM
+    unit: rpm
+  map:
+    aliases:
+      - Intake Manifold Absolute Pressure
+      - Manifold Absolute Pressure
+      - MAP
+    unit: kPa
+  barometric_pressure:
+    aliases:
+      - Barometric Pressure
+      - BARO
+    unit: kPa
+  commanded_equivalence_ratio:
+    aliases:
+      - Commanded Equivalence Ratio
+      - Commanded EQ Ratio
+  wideband_lambda:
+    aliases:
+      - Wideband Lambda
+      - AEM Lambda
+  short_term_fuel_trim_bank_1:
+    aliases:
+      - Short Term Fuel Trim Bank 1
+      - STFT B1
+    unit: percent
+  knock_retard:
+    aliases:
+      - Knock Retard
+      - KR
+    unit: degrees
+  fuel_pressure:
+    aliases:
+      - Fuel Pressure
+      - FTP Sensor
+    unit: psi
+  injector_duty_cycle:
+    aliases:
+      - Injector Duty Cycle
+      - IDC
+    unit: percent
+  transmission_temperature:
+    aliases:
+      - Transmission Fluid Temperature
+      - Trans Temp
+    unit: degF
