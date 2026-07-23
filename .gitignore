@@ -1,0 +1,25 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Tune files may contain licensed or vehicle-specific calibration data.
+calibrations/**/*.hpt
+calibrations/**/*.bin
+
+# Raw logs and generated outputs can be large.
+logs/raw/*
+logs/processed/*
+reports/*
+
+# Retain directory layout.
+!logs/raw/.gitkeep
+!logs/processed/.gitkeep
+!reports/.gitkeep
+!calibrations/stock/.gitkeep
+!calibrations/current/.gitkeep
+!calibrations/archive/.gitkeep
