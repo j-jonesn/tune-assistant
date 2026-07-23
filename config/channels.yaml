@@ -1,55 +1,180 @@
 schema_version: 1
 channels:
-  time:
+  time_s:
     aliases:
+      - Offset
       - Time
       - Time [s]
-  engine_speed:
+    unit: s
+    required: true
+  engine_speed_rpm:
     aliases:
       - Engine RPM
+      - Engine RPM (SAE)
       - Engine Speed
       - RPM
     unit: rpm
-  map:
+    required: true
+  throttle_position_percent:
+    aliases:
+      - Throttle Position
+      - Throttle Position (SAE)
+      - TPS
+    unit: percent
+  map_kpa:
     aliases:
       - Intake Manifold Absolute Pressure
       - Manifold Absolute Pressure
+      - Manifold Absolute Pressure - 2 bar
       - MAP
     unit: kPa
-  barometric_pressure:
+    required: true
+  manifold_vacuum_psi:
+    aliases:
+      - Manifold Vacuum
+    unit: psi
+  barometric_pressure_kpa:
     aliases:
       - Barometric Pressure
       - BARO
     unit: kPa
   commanded_equivalence_ratio:
     aliases:
+      - Equivalence Ratio Commanded
       - Commanded Equivalence Ratio
       - Commanded EQ Ratio
+    unit: lambda
   wideband_lambda:
     aliases:
       - Wideband Lambda
       - AEM Lambda
-  short_term_fuel_trim_bank_1:
-    aliases:
-      - Short Term Fuel Trim Bank 1
-      - STFT B1
-    unit: percent
-  knock_retard:
+      - MPVI2.1 -> AEM 30-(03x0,2340,5130)
+    unit: lambda
+  knock_retard_deg:
     aliases:
       - Knock Retard
       - KR
     unit: degrees
-  fuel_pressure:
+  short_term_fuel_trim_bank_1_percent:
     aliases:
-      - Fuel Pressure
+      - Short Term Fuel Trim Bank 1
+      - Short Term Fuel Trim Bank 1 (SAE)
+      - STFT B1
+    unit: percent
+  short_term_fuel_trim_bank_2_percent:
+    aliases:
+      - Short Term Fuel Trim Bank 2
+      - Short Term Fuel Trim Bank 2 (SAE)
+      - STFT B2
+    unit: percent
+  long_term_fuel_trim_bank_1_percent:
+    aliases:
+      - Long Term Fuel Trim Bank 1
+      - Long Term Fuel Trim Bank 1 (SAE)
+      - LTFT B1
+    unit: percent
+  long_term_fuel_trim_bank_2_percent:
+    aliases:
+      - Long Term Fuel Trim Bank 2
+      - Long Term Fuel Trim Bank 2 (SAE)
+      - LTFT B2
+    unit: percent
+  idle_adapt_stit_gps:
+    aliases:
+      - Idle Adapt (STIT)
+      - STIT
+    unit: g/s
+  idle_desired_airflow_gps:
+    aliases:
+      - Idle Desired Airflow
+    unit: g/s
+  idle_base_gear_airflow_gps:
+    aliases:
+      - Idle Base Gear Airflow
+    unit: g/s
+  idle_base_park_neutral_airflow_gps:
+    aliases:
+      - Idle Base PN Airflow
+    unit: g/s
+  idle_startup_airflow_gps:
+    aliases:
+      - Idle Startup Airflow
+    unit: g/s
+  idle_ac_airflow_gps:
+    aliases:
+      - Idle AC Airflow
+    unit: g/s
+  idle_air_control_desired_position:
+    aliases:
+      - Idle Air Control Desired Position
+  idle_air_control_position:
+    aliases:
+      - Idle Air Control Position
+  idle_desired_rpm:
+    aliases:
+      - Idle Desired RPM
+    unit: rpm
+  idle_advance_deg:
+    aliases:
+      - Idle Advance
+    unit: degrees
+  injector_pulse_width_bank_1_ms:
+    aliases:
+      - Injector Pulse Width Avg. Bank 1
+    unit: ms
+  injector_pulse_width_bank_2_ms:
+    aliases:
+      - Injector Pulse Width Avg. Bank 2
+    unit: ms
+  fuel_pressure_sensor_v:
+    aliases:
+      - Fuel Tank Pressure
       - FTP Sensor
+    unit: V
+  alcohol_percent:
+    aliases:
+      - Alcohol Percent
+    unit: percent
+  closed_loop_active:
+    aliases:
+      - Closed Loop Active
+    unit: boolean
+  control_module_voltage_v:
+    aliases:
+      - Control Module Voltage
+    unit: V
+  intake_air_temperature_deg_f:
+    aliases:
+      - Intake Air Temp
+      - Intake Air Temp (SAE)
+      - IAT
+    unit: degF
+  engine_coolant_temperature_deg_f:
+    aliases:
+      - Engine Coolant Temp
+      - Engine Coolant Temp (SAE)
+      - ECT
+    unit: degF
+  engine_oil_pressure_psi:
+    aliases:
+      - Engine Oil Pressure
     unit: psi
-  injector_duty_cycle:
+  oxygen_sensor_bank_1_sensor_1_v:
+    aliases:
+      - O2 Voltage B1S1
+      - O2 Voltage B1S1 (SAE)
+    unit: V
+  oxygen_sensor_bank_2_sensor_1_v:
+    aliases:
+      - O2 Voltage B2S1
+      - O2 Voltage B2S1 (SAE)
+    unit: V
+  injector_duty_cycle_percent:
     aliases:
       - Injector Duty Cycle
       - IDC
     unit: percent
-  transmission_temperature:
+  transmission_temperature_deg_f:
     aliases:
       - Transmission Fluid Temperature
       - Trans Temp
